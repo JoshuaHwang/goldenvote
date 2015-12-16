@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta http-equiv="X-US-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <title>Goldenvote</title>
+  </head>
+  <body>
+    <div id="backgroundImage" class="container">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+        <div class="col-md-3 col-md-offset-4 col-lg-3 col-lg-offset-2">
+          <button type="button" id="signUp" class="register-btn btn btn-default" data-toggle="modal" data-target="#register">
+            Sign Up
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="registerLabel">Subscribe for updates.</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" class="form-control" name="username">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" name="email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" name="password">
+                    <label for="confirmPassword">Confirm password:</label>
+                    <input type="password" id="confirmPassword" class="form-control" name="password">
+                    <!-- input form labels in here -->
+                  </form> <!-- sign up form goes here -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div> <!-- closes the modal -->
+        </div>
+      </div> <!-- closes the nav -->
+      <div class="row">
+        <div class="fold col-md-10 col-md-offset-1">
+          <h1 class="title">THE FIGHT FOR CALIFORNIA</h1>
+        </div> <!-- closes the fold -->
+      </div>
+    </div> <!-- closes the header -->
+    <div id="logoBackground" class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="toggle-image">
+            <img src="images/republican.png" id="republicanButton" class="party-logo" alt="Republican logo">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="toggle-image">
+            <img src="images/democrat.png" id="democraticButton" class="party-logo" alt="Democratic logo">
+          </div>
+        </div>
+      </div>
+    </div> <!-- closes the political buttons -->
+    <div class="container">
+      <div class="row">
+      </div>
+    </div> <!-- closes the trend graph -->
+    <div class="container">
+      <div class="row">
+      </div>
+    </div> <!-- closes the twitter stream -->
+    <div class="container">
+      <footer class="footer">
+      </footer>
+    </div>
+  </body>
+</html>
