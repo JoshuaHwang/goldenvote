@@ -1,16 +1,25 @@
 #backgroundImage {
-  background-image: url('../images/sf.jpg');
-  background-size: cover;
+  background-color: #fcfcfc;
   width: 100%;
-  height: 650px;  
+  height: 800px;  
 }
 .navbar-brand, .navbar-brand:hover {
   font-family: Georgia;
   text-decoration: none;
+  color: #080808;
   font-size: 18;
   font-weight: 500;
-  color: #f4f4f4;
   text-align: center;
+}
+.election2016 {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.election {
+  max-width: 230px;
+  margin-top: 18px;
+  display: inline-block;
 }
 #signUp {
   background-color: transparent;
@@ -20,7 +29,6 @@
   font-weight: 500;
   margin-top: 10px;
   border: none;
-  color: #f4f4f4;
 }
 .fold {
   margin-top: 150px;
@@ -31,8 +39,34 @@
   font-size: 70px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 50px;
-  color: #f4f4f4;
+}
+.hook {
+  font-family: Georgia;
+  color: #6D6E70;
+  font-weight: 100;
+  text-align: center;
+}
+.golden {
+  font-family: Georgia;
+  font-weight: 500;
+}
+.hook-row {
+  margin-bottom: 40px;
+}
+.parties {
+  font-family: Arial;
+  font-weight: 800;
+  margin-bottom: 25px;
+  border-bottom: 3px solid black;
+  padding-bottom: 8px;
+  width: 150px;
+}
+.democrats, .republicans {
+  display: inline-block;
+  text-align: center;  
+}
+.portraits {
+  border-radius: 7%;
 }
 #logoBackground {
   margin-top: 50px;

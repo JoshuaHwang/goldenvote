@@ -1,0 +1,24 @@
+{
+  "name": "goldenvote",
+  "version": "1.0.0",
+  "description": "First package",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaHwang/goldenvote.git"
+  },
+  "author": "Joshua Hwang <joshchwang@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaHwang/goldenvote/issues"
+  },
+  "homepage": "https://github.com/JoshuaHwang/goldenvote#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "twit": "^2.1.1"
+  }
+}
