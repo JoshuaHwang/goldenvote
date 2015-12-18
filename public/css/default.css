@@ -113,6 +113,7 @@ label {
 }
 .twitter-container, .twitter-row {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .all-tweets {
   border: 1px solid #d7e3ed;
@@ -130,5 +131,5 @@ label {
   margin-left: 5px;
 }
 footer {
-  height: 100px;
+
 }

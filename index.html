@@ -15,13 +15,13 @@
   <body>
     <div id="backgroundImage" class="container">
       <div class="row">
-        <div class="col-md-2 col-md-offset-2">
+        <div class="col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-2 col-xs-2 col-xs-offset-2">
           <a class="navbar-brand" href="index.html">Home</a>
         </div>
-        <div class="election2016 col-md-4">
+        <div class="election2016 col-md-4 col-sm-4 col-xs-4">
           <img src="/images/election.svg" class="election" alt="Elections 2016">
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-sm-2 col-xs-2">
           <button type="button" id="signUp" class="register-btn btn btn-default" data-toggle="modal" data-target="#register">
             Sign Up
           </button>
@@ -126,22 +126,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <td id="firstPlace">Trump</td>
+                  <td id="firstPlace"><img src="images/trump-head.png" alt="Donald Trump head cutout"></td>
                   <td id="twitterFirst">Twitter 70%</td>
                   <td id="pollFirst">Poll 33%</td>
                 </tr>
                 <tr>
-                  <td id="secondPlace">Cruz</td>
+                  <td id="secondPlace"><img src="images/rubio-head.png"</td>
                   <td id="twitterSecond">Twitter 12%</td>
                   <td id="pollSecond">Poll 15%</td>
                 </tr>
                 <tr>
-                  <td id="thirdPlace">Rubio</td>
+                  <td id="thirdPlace"><img src="images/carson-head.png"</td>
                   <td id="twitterThird">Twitter 10%</td>
                   <td id="pollThird">Poll 12%</td>
                 </tr>
                 <tr>
-                  <td id="fourthPlace">Carson</td>
+                  <td id="fourthPlace"><img src="images/sanders-head.png" alt="Bernie Sanders head cutout"></td>
                   <td id="twitterFourth">Twitter 15%</td>
                   <td id="pollFourth">Poll 12%</td>
                 </tr>
@@ -151,12 +151,13 @@
         </div> <!-- closees the graph -->
       </div>
     </div> <!-- closes the trend graph -->
+    <hr>
     <div class="twitter-container container">
       <div class="row">
         <div class="col-md-6">
           <div class="input-group">
-            <h4>Add the the conversation</h4>
-            <input type="text" class="form-control" placeholder="What's on your mind?">
+            <h4>Add to the conversation</h4>
+            <input type="text" id="sendTweet" class="form-control" placeholder="What's on your mind?">
             <span class="input-group-btn">
               <input type="image" src="images/twitter-logo.png" class="send-tweet" alt="Twitter logo">
             </span>
@@ -170,72 +171,83 @@
               <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+              <p class="userTweet">Jeb's gonna "attack Trump" every day, 'cause he's so brave.
+              How's that workin' for ya so far? #Trump2016</p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet2" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">Jeff Gullickson</h5><p class="screen-name">@gullymn49</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+              <p class="userTweet">$1.1 Trillion to be spent on everycause other than our own The bearded Speaker is NOT CONSERVATIVE #Trump2016</p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet3" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">StopTheMadness</h5><p class="screen-name">@ImmoralReport</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+              <p class="userTweet">Not Mad nor Angry, we're LIVID! STOP REFUGEES or #TaxRevolt Coming! Congress Choice! @RepRussell @RepRubenGallego #Trump2016</p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet4" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">Phil Lowery</h5><p class="screen-name">@Lying2yourselfe</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+              <p class="userTweet">I'm A #TrumpSupporter Everyday I endure #Libtard Trolls like this sore Loser👇 #Trump2016 #TrumpTrain #VoteTrump</p> <!-- change to id -->
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div id="tweet5" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">Juliezzz Friends</h5><p class="screen-name">@JuliezzzFriends</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+              <p class="userTweet">@HillaryClinton give Bernie a pass; acknowledge his character. If he'd known what was going on, he would've put a stop to it. #Hillary2016</p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet6" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">Kos_Cars</h5><p class="screen-name">@Kos_Cars</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+              <p class="userTweet">A little something I made that goes with your theme @DanMartin_cards @Zone6Combat #Hillary2016</p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet7" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">WayneEdH</h5><p class="screen-name">@WayneEdH</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+              <p class="userTweet">@lin_deshan @SteegVan @Auntiemels @Lee_in_Iowa
+              @D0NNIE_BRASC0 Just mad #Hillary2016 beats Bernie head to head Everywhere!</p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet8" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName">Studio Moon NY</h5><p class="screen-name">@Bohemianmoon</p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+              <p class="userTweet">Stop your FILTHY, DIRTY tricks. RELEASE OUR DATA, NOW.  #Hillary2016 knows NOTHING but corruption. #Bernie2016</p> <!-- change to id -->
             </div>
           </div>
         </div>
       </div>
     </div> <!-- closes the twitter stream -->
+    <hr>
     <div class="container">
       <footer class="footer">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-3">
+        </div>
       </footer>
     </div>
   </body>
