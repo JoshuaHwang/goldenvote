@@ -79,7 +79,6 @@ function tweeted(err, data, response)
 }
 
 //SET INTERVAL WITH TWIT
-setInterval(tweetIt, 1000 * 60 * 60);
 
 function tweetIt(text) {
   var tweetUpdate {
@@ -88,18 +87,6 @@ function tweetIt(text) {
 }
 
 t.post('status/update', tweetUpdate, tweetIt)
-
-//STREAM WITH TWIT
-var stream = t.stream('user');
-
-stream.on('follow', followed);
-
-function followed(eventMsg) {
-  var name = eventMsg.source.name;
-  var screenName = eventMsg.source.screen_name;
-  tweetIt('@' + screenName + ' welcome to my world!');
-  console.log('@' + screenName + ' followed you!');
-}
 
 module.exports = twitApi;
 
