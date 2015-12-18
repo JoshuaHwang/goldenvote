@@ -8,7 +8,6 @@ var t = new twit(config);
 console.log('Twit is on the job...');
 
 //GET WITH TWIT
-//setInterval(getTweets, 1000 * 5);
 
 var tweetsArray = [];
 
@@ -59,7 +58,7 @@ function tweetStream(err, data, response)
   }
 }
 
-stream.stop(1000);
+stream.stop();
 
 
 //POST WITH TWIT
@@ -106,9 +105,11 @@ var stream = t.stream('statuses/filter', { track: ['#Trump2016', '#Hillary2016',
 stream.on('tweet', function (tweet) {
   console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text);
   console.log('created on > ' + tweet.created_at + '\n' + 'location   > ' +  tweet.user.location + '\n\n');
-  tweetsArray.push(tweets[i].user.name + tweets[i].user.screen_name + tweets[i].text + tweets[i].created_at + tweets[i].user.location);
+  tweetsArray.push(tweet);
+  if(tweetsArray.length == 10) {
+      stream.stop();
+  }
 })
 
-//figure out how to stop stream within certain time period
-stream.stop();
+//put it on the front end to set timeout and call this function again, turning the stream on
 
