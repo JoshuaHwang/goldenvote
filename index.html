@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/default.css" type="text/css" rel="stylesheet">
-    <title>Goldenvote</title>
+    <title>Twitterpoll</title>
   </head>
   <body>
     <div id="backgroundImage" class="container">
@@ -36,13 +36,13 @@
                 <div class="modal-body">
                   <form class="form">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" class="form-control" name="username">
+                    <input type="text" id="username" class="form-control" name="username" placeholder="Username">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" class="form-control" name="email">
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="form-control" name="password">
+                    <input type="password" id="password" class="form-control" name="password" placeholder="Password">
                     <label for="confirmPassword">Confirm password:</label>
-                    <input type="password" id="confirmPassword" class="form-control" name="password">
+                    <input type="password" id="confirmPassword" class="form-control" name="password" placeholder="Confirm password">
                     <!-- input form labels in here -->
                   </form> <!-- sign up form goes here -->
                 </div>
@@ -58,12 +58,12 @@
       <hr>
       <div class="hook-row row">
         <div class="fold col-md-12">
-          <h1 class="title">THE FIGHT FOR CALIFORNIA</h1>
-          <h2 class="hook">Discover who's trending in the <span class="golden">Golden State</span></h2>
+          <h1 class="title">THE FIGHT FOR AMERICA</h1>
+          <h2 class="hook">Discover who's trending in The <span class="golden">States</span></h2>
         </div> <!-- closes the fold -->
       </div>
       <div class="row">
-        <div class="candidate-group col-md-4 col-md-offset-2">
+        <div class="candidate-group1 col-md-4 col-md-offset-2">
           <h3 class="parties">Democrats</h3>
           <div class="democrats">
             <img src="/images/omalley.jpg" class="portraits" alt="O'Malley portrait">
@@ -78,7 +78,7 @@
             <p>Clinton</p>
           </div>
         </div>
-        <div class="candidate-group col-md-4">
+        <div class="candidate-group2 col-md-4">
           <h3 class="parties">Republicans</h3>
           <div class="republicans">
             <img src="/images/trump.jpg" class="portraits" alt="Trump portrait">
@@ -104,27 +104,133 @@
       <div class="row">
         <div class="col-md-6">
           <div class="toggle-image">
-            <img src="images/democrat.png" id="democraticButton" class="party-logo" alt="Democratic logo">
+            <input type="image" src="images/democrat.png" id="democratToggle" class="party-logo" alt="toggle">
           </div>
         </div>
         <div class="col-md-6">
           <div class="toggle-image">
-            <img src="images/republican.png" id="republicanButton" class="party-logo" alt="Republican logo">
+            <input type="image" src="images/republican.png" id="republicanToggle" class="party-logo" alt="toggle">
           </div>
         </div>
       </div>
     </div> <!-- closes the political buttons -->
-    <div class="container">
+    <div id="tableBackground" class="container">
       <div class="row">
         <div class="col-mg-12">
+          <div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Twitter presence v.s. Poll rankings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="firstPlace">Trump</td>
+                  <td id="twitterFirst">Twitter 70%</td>
+                  <td id="pollFirst">Poll 33%</td>
+                </tr>
+                <tr>
+                  <td id="secondPlace">Cruz</td>
+                  <td id="twitterSecond">Twitter 12%</td>
+                  <td id="pollSecond">Poll 15%</td>
+                </tr>
+                <tr>
+                  <td id="thirdPlace">Rubio</td>
+                  <td id="twitterThird">Twitter 10%</td>
+                  <td id="pollThird">Poll 12%</td>
+                </tr>
+                <tr>
+                  <td id="fourthPlace">Carson</td>
+                  <td id="twitterFourth">Twitter 15%</td>
+                  <td id="pollFourth">Poll 12%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div> <!-- closees the graph -->
       </div>
     </div> <!-- closes the trend graph -->
-    <div class="container">
+    <div class="twitter-container container">
       <div class="row">
         <div class="col-md-6">
+          <div class="input-group">
+            <h4>Add the the conversation</h4>
+            <input type="text" class="form-control" placeholder="What's on your mind?">
+            <span class="input-group-btn">
+              <input type="image" src="images/twitter-logo.png" class="send-tweet" alt="Twitter logo">
+            </span>
+          </div>
+        </div> 
+      </div>
+      <div class="twitter-row row">
+        <div class="col-md-6">
+          <div id="tweet1" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+            </div>
+          </div>
+          <div id="tweet2" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+            </div>
+          </div>
+          <div id="tweet3" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+            </div>
+          </div>
+          <div id="tweet4" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Trump !</p> <!-- change to id -->
+            </div>
+          </div>
         </div>
         <div class="col-md-6">
+          <div id="tweet5" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+            </div>
+          </div>
+          <div id="tweet6" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+            </div>
+          </div>
+          <div id="tweet7" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+            </div>
+          </div>
+          <div id="tweet8" class="all-tweets">
+            <div class="usernames">
+              <h5 class="realName">John Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+            </div>
+            <div class="content">
+              <p class="userTweet">Vote for #Hillary !</p> <!-- change to id -->
+            </div>
+          </div>
         </div>
       </div>
     </div> <!-- closes the twitter stream -->
