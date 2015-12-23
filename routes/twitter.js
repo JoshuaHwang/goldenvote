@@ -7,10 +7,11 @@ var t = new twit(config);
 
 console.log('Twit is on the job...');
 
-//GET WITH TWIT
-
 var tweetsArray = [];
 
+//GET WITH TWIT
+
+/*
 var params = {
   lang: 'en',
   q: '#Hillary2016',
@@ -18,8 +19,6 @@ var params = {
   country_code: 'USA',
   count: 100
 };
-
-// OR #Trump2016 OR #Bernie2016 OR #OMalley2016 OR #Cruz2016 OR #Rubio2016 OR #Carson2016
 
 t.get('search/tweets', params, getTweets);
 
@@ -88,7 +87,7 @@ function tweetIt(text) {
 t.post('status/update', tweetUpdate, tweetIt)
 
 module.exports = twitApi;
-
+*/
 
 // TRUMP 33.0%
 // CRUZ 16.1%
@@ -100,14 +99,23 @@ module.exports = twitApi;
 // O'MALLEY 2.8%
 
 /* ----- TEST STREAMING ----- */
-var stream = t.stream('statuses/filter', { track: ['#Trump2016', '#Hillary2016', '#Bernie2016'] })
+// var tweetData = JSON.parse(httpResponse.text);
+
+var stream = t.stream('statuses/filter', { track: ['#Trump2016', '#Hillary2016', '#Bernie2016', '#Carson2016', '#OMalley2016', '#Cruz2016', '#Rubio2016'] })
 
 stream.on('tweet', function (tweet) {
   console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text);
   console.log('created on > ' + tweet.created_at + '\n' + 'location   > ' +  tweet.user.location + '\n\n');
-  tweetsArray.push(tweet);
+  tweetsArray.push({ 
+        "name"        : tweet.user.name,
+        "screenName"  : tweet.user.screen_name,
+        "tweet"       : tweet.text,
+        "createdOn"   : tweet.created_at,
+        "location"    : tweet.user.location
+  });
   if(tweetsArray.length == 10) {
       stream.stop();
+      console.log('Tweet stream limit reached');
   }
 })
 
