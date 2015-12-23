@@ -9,6 +9,8 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -34,7 +36,7 @@
                   <h4 class="modal-title" id="registerLabel">Subscribe for updates.</h4>
                 </div>
                 <div class="modal-body">
-                  <form class="form">
+                  <form id="subscribeForm" class="form">
                     <label for="username">Username:</label>
                     <input type="text" id="username" class="form-control" name="username" placeholder="Username">
                     <label for="email">Email:</label>
@@ -48,7 +50,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Submit</button>
+                  <button type="button" id="submitButton" class="btn btn-primary">Submit</button>
                 </div>
               </div>
             </div>
@@ -126,22 +128,31 @@
               </thead>
               <tbody>
                 <tr>
-                  <td id="firstPlace"><img src="images/trump-head.png" alt="Donald Trump head cutout"></td>
+                  <td id="firstPlace">
+                    <img src="images/trump-head.png" id="donaldHead" alt="Donald Trump head cutout">
+                    <img src="images/sanders-head.png" id="bernieHead" class="hidden" alt="Bernie Sanders head cutout">
+                  </td>
                   <td id="twitterFirst">Twitter 70%</td>
                   <td id="pollFirst">Poll 33%</td>
                 </tr>
                 <tr>
-                  <td id="secondPlace"><img src="images/rubio-head.png"</td>
+                  <td id="secondPlace">
+                    <img src="images/rubio-head.png">
+                  </td>
                   <td id="twitterSecond">Twitter 12%</td>
                   <td id="pollSecond">Poll 15%</td>
                 </tr>
                 <tr>
-                  <td id="thirdPlace"><img src="images/carson-head.png"</td>
+                  <td id="thirdPlace">
+                    <img src="images/carson-head.png">
+                  </td>
                   <td id="twitterThird">Twitter 10%</td>
                   <td id="pollThird">Poll 12%</td>
                 </tr>
                 <tr>
-                  <td id="fourthPlace"><img src="images/sanders-head.png" alt="Bernie Sanders head cutout"></td>
+                  <td id="fourthPlace">
+                    <img src="images/sanders-head.png" alt="Bernie Sanders head cutout">
+                  </td>
                   <td id="twitterFourth">Twitter 15%</td>
                   <td id="pollFourth">Poll 12%</td>
                 </tr>
@@ -151,6 +162,8 @@
         </div> <!-- closees the graph -->
       </div>
     </div> <!-- closes the trend graph -->
+    <div class="ct-chart ct-perfect-fourth">
+    </div>
     <hr>
     <div class="twitter-container container">
       <div class="row">
@@ -238,17 +251,32 @@
       </div>
     </div> <!-- closes the twitter stream -->
     <hr>
-    <div class="container">
+    <div class="footer-container container">
       <footer class="footer">
         <div class="col-md-3">
+          <img src="/images/election.svg" class="footer-election" alt="Elections 2016">
         </div>
         <div class="col-md-3">
+          <h6 class="footer-headers">Information</h6>
+          <p class="footer-links">About Us</p>
+          <p class="footer-links">Careers</p>
+          <p class="footer-links">Developer's Network</p>
         </div>
         <div class="col-md-3">
+          <h6 class="footer-headers">Contact us</h6>
+          <p class="footer-links">Via Confide, 2350 - 41988 Vignola (MO)</p>
+          <p class="footer-links">Tel: +39 059 774 299</p>
+          <p class="footer-links">Email: elections@twitresearch.com</p>
+          <p class="footer-links">P.I. 028293847172 - Cap. Sociale</p>
         </div>
         <div class="col-md-3">
+          <h6 class="footer-headers">About</h6>
+          <p class="footer-links">Terms of Service</p>
+          <p class="footer-links">Privacy Notice</p>
+          <p class="footer-links">Ad Choices</p>
         </div>
       </footer>
     </div>
+    <script src="./public/js/main.js"></script>
   </body>
 </html>

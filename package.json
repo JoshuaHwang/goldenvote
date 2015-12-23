@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JoshuaHwang/goldenvote#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "bower": "^1.7.1",
     "express": "^4.13.3",
     "twit": "^2.1.1"
   }
