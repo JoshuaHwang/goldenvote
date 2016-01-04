@@ -11,7 +11,7 @@ var tweetsArray = [];
 
 //GET WITH TWIT
 
-/*
+
 var params = {
   lang: 'en',
   q: '#Hillary2016',
@@ -87,7 +87,7 @@ function tweetIt(text) {
 t.post('status/update', tweetUpdate, tweetIt)
 
 module.exports = twitApi;
-*/
+
 
 // TRUMP 33.0%
 // CRUZ 16.1%
@@ -101,7 +101,7 @@ module.exports = twitApi;
 /* ----- TEST STREAMING ----- */
 // var tweetData = JSON.parse(httpResponse.text);
 
-var stream = t.stream('statuses/filter', { track: ['#Trump2016', '#Hillary2016', '#Bernie2016', '#Carson2016', '#OMalley2016', '#Cruz2016', '#Rubio2016'] })
+var stream = t.stream('statuses/filter', { track: ['#Trump2016', '#Hillary2016', '#Bernie2016', '#Cruz2016'] })
 
 stream.on('tweet', function (tweet) {
   console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text);
