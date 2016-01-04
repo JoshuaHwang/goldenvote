@@ -9,8 +9,8 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
-    <script src="bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -162,8 +162,7 @@
         </div> <!-- closees the graph -->
       </div>
     </div> <!-- closes the trend graph -->
-    <div class="ct-chart ct-perfect-fourth">
-    </div>
+    <div class="ct-chart"></div>
     <hr>
     <div class="twitter-container container">
       <div class="row">
@@ -172,7 +171,7 @@
             <h4>Add to the conversation</h4>
             <input type="text" id="sendTweet" class="form-control" placeholder="What's on your mind?">
             <span class="input-group-btn">
-              <input type="image" src="images/twitter-logo.png" class="send-tweet" alt="Twitter logo">
+              <input type="image" src="images/twitter-logo.png" id="submitTweet" class="send-tweet" alt="Twitter logo">
             </span>
           </div>
         </div> 
@@ -277,6 +276,6 @@
         </div>
       </footer>
     </div>
-    <script src="./public/js/main.js"></script>
+    <script src="public/js/chart.js"></script>
   </body>
 </html>
