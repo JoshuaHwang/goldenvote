@@ -13,16 +13,19 @@
     <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-    <!--
+    
     <script>
       var socket = io.connect('http://localhost:8080');
 
       socket.on('stream', function(tweet){
         console.log(tweet);
-        $('#tweet1').append(tweet + '<hr>');
+        $('#tweetHome').html(tweet.text);
+        $('#tweetHome').hide().each(function(i) {
+          $(this).delay(i * 5000).fadeIn(1000);
+        });
       });
     </script>
-    -->
+  
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -218,7 +221,7 @@
               <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet"></p> <!-- change to id -->
+              <p id="tweetHome" class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
         </div>
