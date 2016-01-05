@@ -85,6 +85,12 @@ label {
 .portraits {
   border-radius: 7%;
 }
+.discover {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 26px;
+  margin-top: 50px;
+}
 #logoBackground {
   margin-top: 50px;
 }
