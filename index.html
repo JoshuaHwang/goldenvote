@@ -13,15 +13,16 @@
     <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+    <!--
     <script>
       var socket = io.connect('http://localhost:8080');
 
       socket.on('stream', function(tweet){
         console.log(tweet);
         $('#tweet1').append(tweet + '<hr>');
-        $('#tweet1').fadeIn();
       });
     </script>
+    -->
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -38,7 +39,7 @@
           <button type="button" id="signUp" class="register-btn btn btn-default" data-toggle="modal" data-target="#register">
             Sign Up
           </button>
-          <!-- Modal -->
+          <!-- Modal for sign up -->
           <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -73,6 +74,7 @@
         <div class="fold col-md-12">
           <h1 class="title">THE FIGHT FOR AMERICA</h1>
           <h2 class="hook">Discover who's trending in The <span class="golden">States</span></h2>
+          <p class="discover">Meet the candidates ></p>
         </div> <!-- closes the fold -->
       </div>
       <div class="row">
@@ -83,22 +85,22 @@
             <p>O'Malley</p> -->
           </div>
           <div class="democrats">
-            <img src="/images/sanders.jpg" class="portraits" alt="Sanders portrait">
+            <img src="/images/sanders.jpg" class="portraits" alt="Sanders portrait" data-toggle="modal" data-target="#bio">
             <p>Sanders</p>
           </div>
           <div class="democrats">
-            <img src="/images/clinton.jpg" class="portraits" alt="Clinton portrait">
+            <img src="/images/clinton.jpg" class="portraits" alt="Clinton portrait" data-toggle="modal" data-target="#bio">
             <p>Clinton</p>
           </div>
         </div>
         <div class="candidate-group2 col-md-4">
           <h3 class="parties">Republicans</h3>
           <div class="republicans">
-            <img src="/images/trump.jpg" class="portraits" alt="Trump portrait">
+            <img src="/images/trump.jpg" class="portraits" alt="Trump portrait" data-toggle="modal" data-target="#bio">
             <p>Trump</p>
           </div>
           <div class="republicans">
-            <img src="/images/cruz.jpg" class="portraits" alt="Cruz portrait">
+            <img src="/images/cruz.jpg" class="portraits" alt="Cruz portrait" data-toggle="modal" data-target="#bio">
             <p>Cruz</p>
           </div>
           <div class="republicans">
@@ -110,11 +112,27 @@
             <p>Carson</p> -->
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="discover col-md-6 col-md-offset-3">
-          <p>Meet the candidates</p>
-        </div>
+        <!-- Modal for bio -->
+          <div class="modal fade" id="bio" tabindex="-1" role="dialog" aria-labelledby="bioLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="bioLabel"></h4>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <img src="" id="bioImage" alt="Presidential candidate">
+                  </div>
+                  <div class="row">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div> <!-- closes the modal for bio -->
       </div>
     </div> <!-- closes the header -->
     <hr>

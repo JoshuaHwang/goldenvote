@@ -25,9 +25,9 @@
 #signUp {
   background-color: transparent;
   font-family: Georgia;
-  float: right;
-  font-size: 17px;
   font-weight: 500;
+  font-size: 17px;
+  float: right;
   margin-top: 10px;
   border: none;
 }
@@ -84,11 +84,12 @@ label {
 }
 .portraits {
   border-radius: 7%;
+  cursor: pointer;
 }
 .discover {
   text-align: center;
   font-family: Georgia;
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 50px;
 }
 #logoBackground {
