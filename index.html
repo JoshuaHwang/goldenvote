@@ -9,8 +9,17 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-  <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
+    <!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css"> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+    <script>
+      var socket = io.connect('http://localhost:8080');
+      socket.on('stream', function(tweet){
+        console.log(tweet);
+      $('#tweet1').append(tweet);
+      });
+    </script>
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -68,8 +77,8 @@
         <div class="candidate-group1 col-md-4 col-md-offset-2">
           <h3 class="parties">Democrats</h3>
           <div class="democrats">
-            <img src="/images/omalley.jpg" class="portraits" alt="O'Malley portrait">
-            <p>O'Malley</p>
+            <!-- <img src="/images/omalley.jpg" class="portraits" alt="O'Malley portrait">
+            <p>O'Malley</p> -->
           </div>
           <div class="democrats">
             <img src="/images/sanders.jpg" class="portraits" alt="Sanders portrait">
@@ -91,13 +100,18 @@
             <p>Cruz</p>
           </div>
           <div class="republicans">
-            <img src="/images/rubio.jpg" class="portraits" alt="Rubio portrait">
+            <!-- <img src="/images/rubio.jpg" class="portraits" alt="Rubio portrait">
             <p>Rubio</p>
           </div>
           <div class="republicans">
             <img src="/images/carson.jpg" class="portraits" alt="Carson portrait">
-            <p>Carson</p>
+            <p>Carson</p> -->
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="discover col-md-6 col-md-offset-3">
+          <p>Meet the candidates</p>
         </div>
       </div>
     </div> <!-- closes the header -->
@@ -180,70 +194,76 @@
         <div class="col-md-6">
           <div id="tweet1" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Jane Doe</h5><p class="screen-name">@JaneDoe</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Jeb's gonna "attack Trump" every day, 'cause he's so brave.
-              How's that workin' for ya so far? #Trump2016</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet2" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Jeff Gullickson</h5><p class="screen-name">@gullymn49</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">$1.1 Trillion to be spent on everycause other than our own The bearded Speaker is NOT CONSERVATIVE #Trump2016</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet3" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">StopTheMadness</h5><p class="screen-name">@ImmoralReport</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Not Mad nor Angry, we're LIVID! STOP REFUGEES or #TaxRevolt Coming! Congress Choice! @RepRussell @RepRubenGallego #Trump2016</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet4" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Phil Lowery</h5><p class="screen-name">@Lying2yourselfe</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">I'm A #TrumpSupporter Everyday I endure #Libtard Trolls like this sore Loser👇 #Trump2016 #TrumpTrain #VoteTrump</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <div id="tweet5" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Juliezzz Friends</h5><p class="screen-name">@JuliezzzFriends</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">@HillaryClinton give Bernie a pass; acknowledge his character. If he'd known what was going on, he would've put a stop to it. #Hillary2016</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet6" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Kos_Cars</h5><p class="screen-name">@Kos_Cars</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">A little something I made that goes with your theme @DanMartin_cards @Zone6Combat #Hillary2016</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet7" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">WayneEdH</h5><p class="screen-name">@WayneEdH</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">@lin_deshan @SteegVan @Auntiemels @Lee_in_Iowa
-              @D0NNIE_BRASC0 Just mad #Hillary2016 beats Bernie head to head Everywhere!</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
           <div id="tweet8" class="all-tweets">
             <div class="usernames">
-              <h5 class="realName">Studio Moon NY</h5><p class="screen-name">@Bohemianmoon</p> <!-- change to id -->
+              <h5 class="realName"></h5>
+              <p class="screen-name"></p> <!-- change to id -->
             </div>
             <div class="content">
-              <p class="userTweet">Stop your FILTHY, DIRTY tricks. RELEASE OUR DATA, NOW.  #Hillary2016 knows NOTHING but corruption. #Bernie2016</p> <!-- change to id -->
+              <p class="userTweet"></p> <!-- change to id -->
             </div>
           </div>
         </div>

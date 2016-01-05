@@ -11,7 +11,7 @@ var tweetsArray = [];
 
 //GET WITH TWIT
 
-
+/*
 var params = {
   lang: 'en',
   q: '#Hillary2016',
@@ -35,30 +35,7 @@ function getTweets(err, data, response)
 }
 
 
-
 setInterval(getTweets, 1000 * 60 * 60);
-
-//STREAM WITH TWIT
-var streamParams = {
-  track: ['#Trump2016', '#Hillary2016', '#Sanders2016']
-};
-
-var stream = t.stream('statuses/filter', streamParams);
-
-stream.on('tweet', tweetStream);
-
-function tweetStream(err, data, response)
-{
-  var tweets = data.statuses;
-
-  for(var i = 0; i < tweets.length; ++i) {
-    console.log('name       > ' + tweets[i].user.name + '\n' + 'username   > ' + tweets[i].user.screen_name + '\n' + 'tweet      > ' +  tweets[i].text);
-    console.log('created on > ' + tweets[i].created_at + '\n' + 'location   > ' +  tweets[i].user.location + '\n\n');
-  }
-}
-
-stream.stop();
-
 
 //POST WITH TWIT
 var tweet = {
@@ -75,28 +52,6 @@ function tweeted(err, data, response)
     console.log('You tweeted: ' + data);
   }
 }
-
-//SET INTERVAL WITH TWIT
-
-function tweetIt(text) {
-  var tweetUpdate {
-    status = text;
-  }
-}
-
-t.post('status/update', tweetUpdate, tweetIt)
-
-module.exports = twitApi;
-
-
-// TRUMP 33.0%
-// CRUZ 16.1%
-// RUBIO 12.6%
-// CARSON 12.0%
-
-// CLINTON 55.3%
-// SANDERS 31.2%
-// O'MALLEY 2.8%
 
 /* ----- TEST STREAMING ----- */
 // var tweetData = JSON.parse(httpResponse.text);
