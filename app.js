@@ -49,7 +49,7 @@ io.sockets.on('connection', function(socket) {
   stream.on('tweet', function (tweet) {
     console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text);
     console.log('created on > ' + tweet.created_at + '\n' + 'location   > ' +  tweet.user.location + '\n\n');
-    io.sockets.emit('')
+    io.sockets.emit('stream', /*tweet.user.name, tweet.user.screen_name, */tweet.text/*, tweet.user.profile_image_url*/);
     tweetsArray.push({ 
           "name"        : tweet.user.name,
           "screenName"  : tweet.user.screen_name,
