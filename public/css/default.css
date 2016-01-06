@@ -92,6 +92,16 @@ label {
   font-size: 22px;
   margin-top: 50px;
 }
+.modal-bio-width {
+  width: 900px;
+}
+.modal-bio-height {
+  height: 500px;
+}
+#bioLabel {
+  font-family: Georgia;
+  font-size: 35px;
+}
 #logoBackground {
   margin-top: 50px;
 }
