@@ -1,5 +1,5 @@
 #backgroundImage {
-  background-color: #fcfcfc;
+  background-color: ;
   width: 100%;
   height: 800px;  
 }
@@ -127,20 +127,25 @@ label {
 }
 .all-tweets {
   width: 945px;
-  height: 90px;
+  height: 115px;
   border: 1px solid #d7e3ed;
   margin-bottom: 9px;
   box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.4);
 }
-.realName, .screen-name {
-  margin-left: 5px;
+#realName, #screenName {
+  font-size: 15px;
+  margin-left: 10px;
   display: inline-block;
 }
-.screen-name {
+#realName {
+  font-weight: 700;
+}
+#screenName {
   color: #8899A6;
 }
-.userTweet {
-  margin-left: 5px;
+#tweetHome {
+  font-size: 19px;
+  margin-left: 10px;
 }
 .footer {
   margin-top: 50px;
