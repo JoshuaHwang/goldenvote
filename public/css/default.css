@@ -113,7 +113,8 @@ label {
   outline: 0;
 }
 #tableBackground {
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .input-group-btn {
   padding-top: 30px;
@@ -121,7 +122,11 @@ label {
 .send-tweet:focus {
   outline: 0;
 }
-.twitter-container, .twitter-row {
+.twitter-container {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.twitter-row {
   margin-top: 30px;
   margin-bottom: 40px;
 }
@@ -133,12 +138,13 @@ label {
   box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.4);
 }
 #realName, #screenName {
-  font-size: 15px;
-  margin-left: 10px;
+  font-size: 16px;
+  margin-top: 5px;
   display: inline-block;
 }
 #realName {
   font-weight: 700;
+  margin-left: 10px;
 }
 #screenName {
   color: #8899A6;
@@ -164,3 +170,41 @@ label {
 .footer-container {
   margin-bottom: 50px;
 }
+/* ----- CHART CSS ----- */
+.ct-chart {
+  height: 400px;
+  width: 945px;
+}
+.ct-chart .ct-label.ct-vertical,
+.ct-chart .ct-label.ct-horizontal {
+  font-size: 18px;
+} 
+.ct-chart .ct-series-a .ct-bar {
+  stroke: #55acee;
+}
+.ct-chart .ct-series-a .ct-bar, 
+.ct-chart .ct-series-b .ct-bar {
+  stroke-width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
