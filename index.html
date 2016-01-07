@@ -9,31 +9,14 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css">
+    <!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css"> -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-    
-    <script>
-      //var socket = io.connect('http://localhost:8080');
-
-      socket.on('stream', function(tweet){
-        console.log(tweet);
-        $('#tweetHome').html(tweet.text);
-        $('#tweetHome').hide().each(function(i) {
-          $(this).delay(i * 5000).fadeIn(1000);
-        });
-        $('#realName').html(tweet.user.name);
-        $('#realName').hide().each(function(i) {
-          $(this).delay(i * 5000).fadeIn(1000);
-        });
-        $('#screenName').html(tweet.user.screen_name);
-        $('#screenName').hide().each(function(i) {
-          $(this).delay(i * 5000).fadeIn(1000);
-        });
-      });
-    </script>
-
+    <!-- <script src="public/js/socket.js"></script> -->
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -113,27 +96,30 @@
         </div>
         <!-- Modal for bio -->
           <div class="modal fade" id="bio" tabindex="-1" role="dialog" aria-labelledby="bioLabel">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-bio-width" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="bioLabel"></h4>
+                  <h4 class="modal-title" id="bioLabel">Your presidential candidate</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body modal-bio-height">
                   <div class="row">
-                    <div class="col-md-6">
-                      <p id="candidateName"></p>
-                      <p id="residence"></p>
+                    <div class="col-md-7">
+                      <p id="candidateName">Donald Trump</p>
+                      <p id="residence" class="biography-top"><span class="description-label">Residence:</span> <span class="description-bio">New York City</span></p>
+                      <p id="occupation" class="biography-top"><span class="description-label">Occupation:</span> <span class="description-bio">Real estate mogule and reality TV star</span></p>
                     </div>
-                    <div class="col-md-6">
-                      <img src="" id="bioImage" alt="Presidential candidate">
+                    <div class="col-md-5">
+                      <img src="public/images/trump-bio.jpg" id="trumpBio" class="hidden" alt="Presidential candidate">
+                      <img src="public/images/clinton-bio.jpg" id="clintonBio" class="hidden" alt="Presidential candidate">
+                      <img src="public/images/sanders-bio.jpg" id="sandersBio" class="hidden" alt="Presidential candidate">
+                      <img src="public/images/cruz-bio.jpg" id="cruzBio" class="hidden" alt="Presidential candidate">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <p id="occupation"></p>
-                      <p id="netWorth"></p>
-                      <p id="followers"></p>
+                      <p id="netWorth" class="biography-bottom"><span class="description-label">Net worth:</span> <span class="description-bio">Somewhere between $1.5 billion and $10 billion</span></p>
+                      <p id="followers" class="biography-bottom"><span class="description-label">Twitter followers:</span> <span class="description-bio">5.75 million</span> <a href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">@realDonaldTrump</a></p>
                     </div>
                   </div>
                 </div>
@@ -163,7 +149,7 @@
     <div id="tableBackground" class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <div class="ct-chart"></div>
+          <div id="chart" class="ct-chart"></div>
         </div>
       </div>
     </div> <!-- closes the trend graph -->

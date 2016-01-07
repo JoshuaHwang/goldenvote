@@ -1,3 +1,28 @@
+var chart = c3.generate({
+  bindto: '#chart',
+  data: {
+    columns: [
+      ['Polls', 53.3, 35.3, 32.0, 20.0],
+      ['Twitter', 25.9, 70.2, 30.8, 7.8]
+    ],
+    type: 'bar'
+  },
+  axis: {
+      x: {
+        type: 'label',
+        tick: {
+          // this also works for non timeseries data
+          values: ['Trump', 'Clinton', 'Bernie', 'Cruz']
+      }
+    }
+  },
+  bar: {
+    width: {
+      ratio: 0.5 //makes bar width 50% of length between ticks
+    }
+  }
+});
+/*
 new Chartist.Bar('.ct-chart', {
   labels: ['Clinton', 'Trump', 'Bernie', 'Cruz'],
   series: [
@@ -37,3 +62,5 @@ function update(data, options, override) {
 
   return this;
 }
+*/
+//updates the chart which currentlty does a full reconstruction of the SVG DOM
