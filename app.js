@@ -30,6 +30,7 @@ server.listen(8080);
 console.log('8080 is the magic port!');
 
 app.use(express.static('public'));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
@@ -45,15 +46,20 @@ io.sockets.on('connection', function(socket) {
 
   stream.on('tweet', function (tweet) {
     console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text + '\n\n');
-    io.sockets.emit('stream', /*tweet.user.name, tweet.user.screen_name, */tweet/*, tweet.user.profile_image_url*/);
+    io.sockets.emit('stream', tweet);
+    
+    /*
+    var interval = setInterval(function() {
+      io.sockets.emit('stream', tweet);
+    }, 3000);
+    */
 
     tweetsArray.push({
           "name"        : tweet.user.name,
           "screenName"  : tweet.user.screen_name,
-          "tweet"       : tweet.text,
-          "createdOn"   : tweet.created_at,
-          "location"    : tweet.user.location
+          "tweet"       : tweet.text
     });
+
     /*
     setInterval(function() {
       var nextTweet = tweetsArray.shift();
@@ -62,6 +68,7 @@ io.sockets.on('connection', function(socket) {
       }
     }, 3000);
     */
+
     if(tweetsArray.length == 1) {
         stream.stop();
         console.log('Tweet stream limit reached');
