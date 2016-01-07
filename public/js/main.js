@@ -40,6 +40,7 @@ function showTrump() {
   clintonBio.setAttribute('class', 'hidden');
   sandersBio.setAttribute('class', 'hidden');
   cruzBio.setAttribute('class', 'hidden');
+  name.appendChild(donaldTrump.candidateName);
 }
 
 function showClinton() {
