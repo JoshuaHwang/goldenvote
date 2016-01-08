@@ -19,6 +19,7 @@
 }
 .election {
   max-width: 230px;
+  min-width: 175px;
   margin-top: 18px;
   display: inline-block;
 }
@@ -96,11 +97,34 @@ label {
   width: 900px;
 }
 .modal-bio-height {
-  height: 500px;
+  height: 420px;
 }
 #bioLabel {
   font-family: Georgia;
   font-size: 35px;
+}
+#candidateName {
+  font-family: Georgia;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.biography-top, .biography-bottom {
+  font-family: Georgia;
+  font-size: 23px;
+}
+.biography-top {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+.biography-bottom {
+  margin-bottom: 35px;
+}
+.description-label {
+  font-weight: 700;
+}
+.description-bio {
+  color: #6D6E70;
 }
 #logoBackground {
   margin-top: 50px;
@@ -111,16 +135,33 @@ label {
   text-align: center;
   display: inline-block;
 }
-.party-logo {
+.toggle-button {
+  text-align: center;
+}
+.toggle-btn {
+  width: 160px;
+  font-size: 18px;
+}
+.toggle-btn:focus {
+  outline: 0 !important;
+}
+/*
+.twitter-btn {
+  background-color: #55acee;
+}
+.poll-btn {
+  background-color: #EB1E00; 
+}
+*/
+.toggle-btn {
   -webkit-filter: grayscale(1);
 }
-.party-logo:hover {
+.toggle-btn:hover {
   -webkit-filter: grayscale(0);
   -webkit-transition: all .2s ease-in;
 }
-.party-logo:focus {
+.toggle-btn:focus {
   -webkit-filter: grayscale(0);
-  outline: 0;
 }
 #tableBackground {
   margin-top: 50px;
@@ -142,10 +183,11 @@ label {
 }
 .all-tweets {
   width: 945px;
-  height: 115px;
+  height: 415px;
   border: 1px solid #d7e3ed;
   margin-bottom: 9px;
   box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  overflow: auto;
 }
 #realName, #screenName {
   font-size: 16px;
@@ -185,9 +227,11 @@ label {
   height: 400px;
   width: 945px;
 }
+/*
 .ct-chart .ct-label.ct-vertical,
 .ct-chart .ct-label.ct-horizontal {
   font-size: 18px;
+  color: #6D6E70;
 } 
 .ct-chart .ct-series-a .ct-bar {
   stroke: #55acee;
@@ -196,25 +240,7 @@ label {
 .ct-chart .ct-series-b .ct-bar {
   stroke-width: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 
