@@ -9,14 +9,14 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css"> -->
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-    <!-- <script src="public/js/socket.js"></script> -->
+    <script src="public/js/socket.js"></script>
     <link href="css/default.css" type="text/css" rel="stylesheet">
     <title>Twitterpoll</title>
   </head>
@@ -134,6 +134,12 @@
     <hr>
     <div id="logoBackground" class="container">
       <div class="row">
+        <div class="toggle-button col-md-6 col-md-offset-3">
+          <button type="button" id="pollButton" class="poll-btn toggle-btn btn btn-default">Poll ranking</button>
+          <button type="button" id="bothButton" class="toggle-btn btn btn-default">Both</button>
+          <button type="button" id="twitterButton" class="twitter-btn toggle-btn btn btn-default">Twitter pesence</button>
+        </div>
+        <!--
         <div class="col-md-6">
           <div class="toggle-image">
             <input type="image" src="images/democrat.png" id="democratToggle" class="party-logo" alt="toggle">
@@ -143,7 +149,7 @@
           <div class="toggle-image">
             <input type="image" src="images/republican.png" id="republicanToggle" class="party-logo" alt="toggle">
           </div>
-        </div>
+        </div> -->
       </div>
     </div> <!-- closes the political buttons -->
     <div id="tableBackground" class="container">

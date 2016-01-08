@@ -21,3 +21,26 @@ var chart = c3.generate({
     width: 945
   }
 });
+
+var democrat = document.getElementById('twitterButton');
+var republican = document.getElementById('pollButton');
+var both = document.getElementById('bothButton');
+
+democrat.addEventListener('click', demGraph);
+republican.addEventListener('click', repGraph);
+both.addEventListener('click', bothGraph);
+
+function demGraph() {
+  chart.hide('Twitter');
+  chart.show('Polls');
+}
+
+function repGraph() {
+  chart.hide('Polls');
+  chart.show('Twitter');
+}
+
+function bothGraph() {
+  chart.show('Twitter');
+  chart.show('Polls');
+}
