@@ -13,11 +13,12 @@ var chart = c3.generate({
       Polls: '#eb1e00'
     }
   },
-  /*axis: {
+  axis: {
     x: {
-      type: 'category'
+      type: 'category',
+      categories: ['Trump', 'Hillary', 'Bernie', 'Cruz']
     }
-  },*/
+  },
   bar: {
     width: {
       ratio: 0.45
@@ -28,6 +29,8 @@ var chart = c3.generate({
     width: 945
   }
 });
+
+
 
 var democrat = document.getElementById('twitterButton');
 var republican = document.getElementById('pollButton');
