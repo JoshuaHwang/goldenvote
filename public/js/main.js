@@ -1,6 +1,7 @@
 /* ----- MODALS FOR PRESIDENTIAL BIOS ----- */
 var bioImage    = document.getElementById('bioImage');
 var bioLabel    = document.getElementById('bioLabel');
+var party       = document.getElementById('party');
 var presName    = document.getElementById('candidateName');
 var residence   = document.getElementById('residence');
 var occupation  = document.getElementById('occupation');
@@ -8,7 +9,8 @@ var netWorth    = document.getElementById('netWorth');
 var followers   = document.getElementById('followers');
 var twitterSite = document.getElementById('twitterSite');
 
-function candidate(candidateName, city, job, worth, twitterFollowers) {
+function candidate(politicalParty, candidateName, city, job, worth, twitterFollowers) {
+  this.politicalParty    = politicalParty;
   this.candidateName     = candidateName;
   this.city              = city;
   this.job               = job; 
@@ -16,10 +18,10 @@ function candidate(candidateName, city, job, worth, twitterFollowers) {
   this.twitterFollowers  = twitterFollowers;
 }
 
-var donaldTrump    = new candidate('Donald Trump', 'New York City', 'Real estate mogul and reality TV star', 'Somewhere between $1.5 billion and $10 billion', '5.75 million');
-var tedCruz        = new candidate('Ted Cruz', 'Houston', 'U.S. Senator from Texas', 'At least $2.1 million', '694 thousand');
-var hillaryClinton = new candidate('Hillary Clinton', 'Washington D.C.', 'United Secretary of State', '$45 million', '5.05 million');
-var bernieSanders  = new candidate('Bernie Sanders', 'Burlington', 'U.S. senator from Vermont', '$700,000', '1.11 million');
+var donaldTrump    = new candidate('republican', 'Donald Trump', 'New York City', 'Real estate mogul and reality TV star', 'Somewhere between $1.5 billion and $10 billion', '5.75 million');
+var tedCruz        = new candidate('republican','Ted Cruz', 'Houston', 'U.S. Senator from Texas', 'At least $2.1 million', '694 thousand');
+var hillaryClinton = new candidate('democratic','Hillary Clinton', 'Washington D.C.', 'United Secretary of State', '$45 million', '5.05 million');
+var bernieSanders  = new candidate('democratic','Bernie Sanders', 'Burlington', 'U.S. senator from Vermont', '$700,000', '1.11 million');
 
 var trumpPortrait   = document.getElementById('trumpPortrait');
 var cruzPortrait    = document.getElementById('cruzPortrait');
@@ -50,6 +52,7 @@ function showTrump() {
   atHillary.setAttribute('class', 'hidden');
   atBernie.setAttribute('class', 'hidden');
   atCruz.setAttribute('class', 'hidden');
+  party.textContent      = donaldTrump.politicalParty;
   presName.textContent   = donaldTrump.candidateName;
   residence.textContent  = donaldTrump.city;
   occupation.textContent = donaldTrump.job;
@@ -66,6 +69,7 @@ function showClinton() {
   atTrump.setAttribute('class', 'hidden');
   atBernie.setAttribute('class', 'hidden');
   atCruz.setAttribute('class', 'hidden');
+  party.textContent      = hillaryClinton.politicalParty;
   presName.textContent   = hillaryClinton.candidateName;
   residence.textContent  = hillaryClinton.city;
   occupation.textContent = hillaryClinton.job;
@@ -82,6 +86,7 @@ function showSanders() {
   atTrump.setAttribute('class', 'hidden');
   atHillary.setAttribute('class', 'hidden');
   atCruz.setAttribute('class', 'hidden');
+  party.textContent      = bernieSanders.politicalParty;
   presName.textContent   = bernieSanders.candidateName;
   residence.textContent  = bernieSanders.city;
   occupation.textContent = bernieSanders.job;
@@ -98,6 +103,7 @@ function showCruz() {
   atHillary.setAttribute('class', 'hidden');
   atTrump.setAttribute('class', 'hidden');
   atBernie.setAttribute('class', 'hidden');
+  party.textContent      = tedCruz.politicalParty;
   presName.textContent   = tedCruz.candidateName;
   residence.textContent  = tedCruz.city;
   occupation.textContent = tedCruz.job;
@@ -106,8 +112,8 @@ function showCruz() {
 }
 
 /* ----- LIVE STREAM WORDS ----- */
-var hashtagTrump = '#Trump2016';
+var hashtagTrump   = '#Trump2016';
 var hashtagHillary = '#Hillary2016';
-var hashtagBernie = '#Bernie2016';
-var hashtagCruz = '#Cruz2016';
+var hashtagBernie  = '#Bernie2016';
+var hashtagCruz    = '#Cruz2016';
 
