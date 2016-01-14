@@ -1,14 +1,5 @@
 var socket = io.connect('http://localhost:8080');
 
-socket.on('stream', function(tweet){
-  console.log(tweet);
-
-  $(tweet.user.name + ' ' + tweet.user.screen_name + '<br>' + tweet.text + '<hr>')
-    .prependTo('#tweetHome')
-    .hide()
-    .slideDown();
-});
-
 var chart = c3.generate({
   bindto: '#chart',
   data: {
@@ -41,8 +32,32 @@ var chart = c3.generate({
   }
 });
 
-var donald = 1;
-var hashtagTrump = '#Trump2016';
+var tweetArray = [];
+
+socket.on('stream', function(tweet){
+  console.log(tweet);
+
+  $(tweet.user.name + ' ' + tweet.user.screen_name + '<br>' + tweet.text + '<hr>')
+    .prependTo('#tweetHome')
+    .hide()
+    .slideDown();
+
+    tweetArray.push(tweet.text);
+    console.log(tweetArray);
+});
+
+var donald = 0;
+
+var hashtagTrump   = '#Trump2016';
+var hashtagHillary = '#Hillary2016';
+var hashtagBernie  = '#Bernie2016';
+var hashtagCruz    = '#Cruz2016';
+
+var incrementTrump = function() {
+  if(tweetArray.indexOf(hashtagTrump) > -1 ) {
+    ++donald;
+  }
+}
 
 setInterval(function () {
   chart.load({
