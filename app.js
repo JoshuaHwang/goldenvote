@@ -34,7 +34,7 @@ io.sockets.on('connection', function(socket) {
           "tweet"       : tweet.text
     });
 
-    if(tweetsArray.length == 10) {
+    if(tweetsArray.length == 100) {
         stream.stop();
         console.log('Tweet stream limit reached');
     }
