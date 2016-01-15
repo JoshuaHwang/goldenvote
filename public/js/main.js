@@ -111,9 +111,3 @@ function showCruz() {
   followers.textContent  = tedCruz.twitterFollowers;
 }
 
-/* ----- LIVE STREAM WORDS ----- */
-var hashtagTrump   = '#Trump2016';
-var hashtagHillary = '#Hillary2016';
-var hashtagBernie  = '#Bernie2016';
-var hashtagCruz    = '#Cruz2016';
-
