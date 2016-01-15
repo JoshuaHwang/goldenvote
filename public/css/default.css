@@ -1,3 +1,6 @@
+.container {
+  width: 1200px !important;
+}
 #backgroundImage {
   background-color: ;
   width: 100%;
@@ -203,6 +206,7 @@ label {
 }
 .footer-election {
   margin-top: 10px;
+  max-width: 300px;
 }
 .footer-headers {
   font-size: 15px;
