@@ -38,9 +38,7 @@ socket.on('stream', function(tweet){
   console.log(tweet);
 
   $(tweet.user.name + ' ' + tweet.user.screen_name + '<br>' + tweet.text + '<hr>')
-    .prependTo('#tweetHome')
-    .hide()
-    .slideDown();
+    .prependTo('#tweetHome');
 
     if(tweet.text.indexOf(hashtagHillary) > -1 ) {
         ++hillary;
@@ -77,7 +75,7 @@ setInterval(function () {
         ['Polls', 48.3, 35.3, 39.7, 20.0]
       ]
   });
-}, 1500);
+}, 1000);
 
 /* ----- TOGGLE BETWEEN GRAPHS ----- */
 var democrat   = document.getElementById('twitterButton');
