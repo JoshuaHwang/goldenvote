@@ -42,31 +42,42 @@ socket.on('stream', function(tweet){
     .hide()
     .slideDown();
 
-    tweetArray.push(tweet.text);
-    console.log(tweetArray);
+    if(tweet.text.indexOf(hashtagHillary) > -1 ) {
+        ++hillary;
+      };
+
+    if(tweet.text.indexOf(hashtagTrump) > -1 ) {
+        ++donald;
+      };
+
+    if(tweet.text.indexOf(hashtagBernie) > -1 ) {
+        ++bernie;
+      };
+
+    if(tweet.text.indexOf(hashtagCruz) > -1 ) {
+        ++cruz;
+      };
+
 });
 
-var donald = 0;
+var donald  = 0;
+var hillary = 0;
+var bernie  = 0;
+var cruz    = 0;
 
 var hashtagTrump   = '#Trump2016';
 var hashtagHillary = '#Hillary2016';
 var hashtagBernie  = '#Bernie2016';
 var hashtagCruz    = '#Cruz2016';
 
-var incrementTrump = function() {
-  if(tweetArray.indexOf(hashtagTrump) > -1 ) {
-    ++donald;
-  }
-}
-
 setInterval(function () {
   chart.load({
       columns: [
-        ['Twitter', donald, Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100)],
-        ['Polls', Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100), Math.round(Math.random()*100)]
+        ['Twitter', hillary, donald, bernie, cruz],
+        ['Polls', 48.3, 35.3, 39.7, 20.0]
       ]
   });
-}, 2500);            
+}, 1500);
 
 var democrat   = document.getElementById('twitterButton');
 var republican = document.getElementById('pollButton');
