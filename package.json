@@ -1,5 +1,5 @@
 {
-  "name": "goldenvote",
+  "name": "twitterpolls",
   "version": "1.0.0",
   "description": "First package",
   "main": "app.js",
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/JoshuaHwang/goldenvote#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "bower": "^1.7.1",
     "express": "^4.13.3",
     "socket.io": "^1.3.7",
     "twit": "^2.1.1"
