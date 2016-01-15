@@ -47,7 +47,7 @@ label {
   margin-top: 10px;
 }
 .fold {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .title {
   font-family: Georgia;
@@ -230,6 +230,10 @@ label {
 #chart .c3-axis-y {
   font-size: 12px;
 }
-
-
+/* Small devices (tablets, 768px and up) */
+  @media (min-width: 995px) {
+    .fold {
+      margin-top: 125px;
+    }
+  }
 
