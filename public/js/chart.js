@@ -40,19 +40,19 @@ socket.on('stream', function(tweet){
   $(tweet.user.name + ' ' + tweet.user.screen_name + '<br>' + tweet.text + '<hr>')
     .prependTo('#tweetHome');
 
-    if(tweet.text.indexOf(hashtagHillary || hillaryMoment) > -1 ) {
+    if(tweet.text.indexOf(hashtagHillary || hillaryMention) > -1 ) {
         ++hillary;
       };
 
-    if(tweet.text.indexOf(hashtagTrump || trumpMoment) > -1 ) {
+    if(tweet.text.indexOf(hashtagTrump || trumpMention) > -1 ) {
         ++donald;
       };
 
-    if(tweet.text.indexOf(hashtagBernie || bernieMoment) > -1 ) {
+    if(tweet.text.indexOf(hashtagBernie || bernieMention) > -1 ) {
         ++bernie;
       };
 
-    if(tweet.text.indexOf(hashtagCruz || cruzMoment) > -1 ) {
+    if(tweet.text.indexOf(hashtagCruz || cruzMention) > -1 ) {
         ++cruz;
       };
 
@@ -63,14 +63,14 @@ var hillary = 0;
 var bernie  = 0;
 var cruz    = 0;
 
-var hashtagTrump   = '#Trump2016';
-var hashtagHillary = '#Hillary2016';
-var hashtagBernie  = '#Bernie2016';
-var hashtagCruz    = '#Cruz2016';
-var hillaryMoment  = 'Hillary';
-var trumpMoment    = 'Trump';
-var bernieMoment   = 'Bernie';
-var cruzMoment     = 'Cruz';
+var hashtagTrump    = '#Trump2016';
+var hashtagHillary  = '#Hillary2016';
+var hashtagBernie   = '#Bernie2016';
+var hashtagCruz     = '#Cruz2016';
+var hillaryMention  = 'Hillary Clinton';
+var trumpMention    = 'Donald Trump';
+var bernieMention   = 'Bernie Sanders';
+var cruzMention     = 'Ted Cruz';
 
 setInterval(function () {
   chart.load({
@@ -79,7 +79,7 @@ setInterval(function () {
         ['Polls', 48.3, 35.3, 39.7, 20.0]
       ]
   });
-}, 1250);
+}, 250);
 
 /* ----- TOGGLE BETWEEN GRAPHS ----- */
 var democrat   = document.getElementById('twitterButton');
