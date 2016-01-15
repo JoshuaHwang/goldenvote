@@ -1,5 +1,4 @@
-var socket = io.connect('http://localhost:8080');
-
+/* ----- GENERATE CHART TO DOM ----- */
 var chart = c3.generate({
   bindto: '#chart',
   data: {
@@ -32,7 +31,8 @@ var chart = c3.generate({
   }
 });
 
-var tweetArray = [];
+/* ----- START TWITTER STREAM ----- */
+var socket = io.connect('http://localhost:8080');
 
 socket.on('stream', function(tweet){
   console.log(tweet);
@@ -79,6 +79,7 @@ setInterval(function () {
   });
 }, 1500);
 
+/* ----- TOGGLE BETWEEN GRAPHS ----- */
 var democrat   = document.getElementById('twitterButton');
 var republican = document.getElementById('pollButton');
 var both       = document.getElementById('bothButton');
