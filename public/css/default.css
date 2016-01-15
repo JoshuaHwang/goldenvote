@@ -120,9 +120,6 @@ label {
 .biography-bottom {
   margin-bottom: 35px;
 }
-#trumpSite, #clintonSite, #sandersSite, #cruzSite {
-
-}
 .description-label {
   font-weight: 700;
 }
@@ -148,14 +145,6 @@ label {
 .toggle-btn:focus {
   outline: 0 !important;
 }
-/*
-.twitter-btn {
-  background-color: #55acee;
-}
-.poll-btn {
-  background-color: #EB1E00; 
-}
-*/
 .toggle-btn {
   -webkit-filter: grayscale(1);
 }
@@ -227,24 +216,16 @@ label {
   margin-bottom: 50px;
 }
 /* ----- CHART CSS ----- */
-.ct-chart {
+#chart {
   height: 400px;
   width: 945px;
 }
-/*
-.ct-chart .ct-label.ct-vertical,
-.ct-chart .ct-label.ct-horizontal {
-  font-size: 18px;
-  color: #6D6E70;
-} 
-.ct-chart .ct-series-a .ct-bar {
-  stroke: #55acee;
+#chart .c3-axis-x {
+  font-size: 15px;
 }
-.ct-chart .ct-series-a .ct-bar, 
-.ct-chart .ct-series-b .ct-bar {
-  stroke-width: 20px;
+#chart .c3-axis-y {
+  font-size: 12px;
 }
-*/
 
 
 
