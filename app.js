@@ -22,10 +22,19 @@ var tweetsArray = [];
 io.sockets.on('connection', function(socket) {
   console.log('Someone connected!');
 
-  var stream = t.stream('statuses/filter', { track: ['#Bernie2016', '#Hillary2016', '#Trump2016', '#Cruz2016'] })
+  var stream = t.stream('statuses/filter', { 
+    track: [
+      '#Bernie2016', 
+      '#Hillary2016',
+      '#Trump2016', 
+      '#Cruz2016'
+     ] 
+   })
 
   stream.on('tweet', function (tweet) {
-    console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text + '\n\n');
+    console.log('name       > ' + tweet.user.name + '\n' + 'username   > ' 
+      + tweet.user.screen_name + '\n' + 'tweet      > ' +  tweet.text + '\n\n');
+
     io.sockets.emit('stream', tweet);
 
     tweetsArray.push({
