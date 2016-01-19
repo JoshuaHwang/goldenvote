@@ -219,6 +219,13 @@ label {
 .footer-container {
   margin-bottom: 50px;
 }
+.flex-container {
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  text-decoration: none;
+  list-style: none;
+}
 /* ----- CHART CSS ----- */
 #chart {
   height: 400px;
