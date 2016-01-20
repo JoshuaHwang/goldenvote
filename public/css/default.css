@@ -228,6 +228,15 @@ label {
   text-decoration: none;
   list-style: none;
 }
+.profile-image {
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.streamed-tweets {
+  font-size: 14px;
+}
 /* ----- CHART CSS ----- */
 #chart {
   height: 400px;

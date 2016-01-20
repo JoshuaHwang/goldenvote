@@ -37,8 +37,11 @@ var socket = io.connect('http://localhost:8080');
 socket.on('stream', function(tweet){
   console.log(tweet);
 
-  $(tweet.user.name + ' ' + tweet.user.screen_name + '<br>' + tweet.text + '<hr>')
-    .prependTo('#tweetHome');
+  $('#tweetHome').prepend('<img src="' + tweet.user.profile_image_url + '" class="profile-image"> ' 
+    + '<b><font size="2">' + tweet.user.name + '</font></b>' + ' ' + '<font size="2" color="#8899A6">@' 
+    + tweet.user.screen_name + '</font>' + '<p class="streamed-tweets">' + tweet.text + '</p><hr>');
+
+  $('tweetHome').prepend()
 
     if(tweet.text.indexOf(hashtagHillary || hillaryMention) > -1 ) {
         ++hillary;
