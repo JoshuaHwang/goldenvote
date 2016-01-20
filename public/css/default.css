@@ -144,6 +144,8 @@ label {
 .toggle-btn {
   width: 160px;
   font-size: 18px;
+  font-weight: 200;
+  border-radius: 0;
 }
 .toggle-btn:focus {
   outline: 0 !important;
