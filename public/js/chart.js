@@ -41,8 +41,6 @@ socket.on('stream', function(tweet){
     + '<b><font size="2">' + tweet.user.name + '</font></b>' + ' ' + '<font size="2" color="#8899A6">@' 
     + tweet.user.screen_name + '</font>' + '<p class="streamed-tweets">' + tweet.text + '</p><hr>');
 
-  $('tweetHome').prepend()
-
     if(tweet.text.indexOf(hashtagHillary || hillaryMention) > -1) {
         ++hillary;
       };
