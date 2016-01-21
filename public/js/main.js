@@ -21,7 +21,7 @@ function candidate(politicalParty, candidateName, city, job, worth, twitterFollo
 var donaldTrump    = new candidate('republican', 'Donald Trump', 'New York City', 'Real estate mogul and reality TV star', 'Somewhere between $1.5 billion and $10 billion', '5.75 million');
 var tedCruz        = new candidate('republican','Ted Cruz', 'Houston', 'U.S. Senator from Texas', 'At least $2.1 million', '694 thousand');
 var hillaryClinton = new candidate('democratic','Hillary Clinton', 'Washington D.C.', 'United Secretary of State', '$45 million', '5.05 million');
-var bernieSanders  = new candidate('democratic','Bernie Sanders', 'Burlington', 'U.S. senator from Vermont', '$700,000', '1.11 million');
+var bernieSanders  = new candidate('democratic','Bernie Sanders', 'Burlington', 'U.S. Senator from Vermont', '$700,000', '1.11 million');
 
 var trumpPortrait   = document.getElementById('trumpPortrait');
 var cruzPortrait    = document.getElementById('cruzPortrait');
@@ -110,4 +110,3 @@ function showCruz() {
   netWorth.textContent   = tedCruz.worth;
   followers.textContent  = tedCruz.twitterFollowers;
 }
-
