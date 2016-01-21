@@ -43,22 +43,21 @@ socket.on('stream', function(tweet){
 
   $('tweetHome').prepend()
 
-    if(tweet.text.indexOf(hashtagHillary || hillaryMention) > -1 ) {
+    if(tweet.text.indexOf(hashtagHillary || hillaryMention) > -1) {
         ++hillary;
       };
 
-    if(tweet.text.indexOf(hashtagTrump || trumpMention) > -1 ) {
+    if(tweet.text.indexOf(hashtagTrump || trumpMention) > -1) {
         ++donald;
       };
 
-    if(tweet.text.indexOf(hashtagBernie || bernieMention) > -1 ) {
+    if(tweet.text.indexOf(hashtagBernie || bernieMention) > -1) {
         ++bernie;
       };
 
-    if(tweet.text.indexOf(hashtagCruz || cruzMention) > -1 ) {
+    if(tweet.text.indexOf(hashtagCruz || cruzMention) > -1) {
         ++cruz;
       };
-
 });
 
 var donald  = 0;
