@@ -8,8 +8,8 @@ var config  = require('./routes/config.js');
 
 var port = process.env.PORT || 8080;
 
-app.listen(8080);
-console.log('8080 is the magic port!');
+app.listen(port);
+console.log(port + ' is the magic port!');
 
 app.use(express.static('public'));
 app.use('/public', express.static(path.join(__dirname, 'public')));
