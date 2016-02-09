@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoshuaHwang/goldenvote.git"
+    "url": "git+https://github.com/JoshuaHwang/twitterpolls.git"
   },
   "author": "Joshua Hwang <joshchwang@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JoshuaHwang/goldenvote/issues"
+    "url": "https://github.com/JoshuaHwang/twitterpolls/issues"
   },
-  "homepage": "https://github.com/JoshuaHwang/goldenvote#readme",
+  "homepage": "https://github.com/JoshuaHwang/twitterpolls#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
