@@ -1,15 +1,13 @@
 var express = require('express');
 var app     = express();
 var path    = require('path');
-var server  = require('http').createServer(app);
-var io      = require('socket.io').listen(server);
 var twit    = require('twit');
-var config  = require('./routes/config.js');
 
 var port = process.env.PORT || 8080;
-
-app.listen(port);
 console.log(port + ' is the magic port!');
+
+var server  = app.listen(port);
+var io      = require('socket.io').listen(server);
 
 app.use(express.static('public'));
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -18,7 +16,13 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-var t           = new twit(config);
+var t = new twit({
+  consumer_key: 'wjJzOeCTa3NgIwpng7uBbtP0o',
+  consumer_secret: 'mFY7YGOkj9LwITBBXdjj4sGsJ3auLaZyDyQr7gGoZ0EEAdzEQD',
+  access_token: '4569267073-rwUTZglZLMoKUTrTllluJq3zzGJK2uQ4lBRJkpJ',
+  access_token_secret: 'eAwPJybDLYq0G3N5qYivzX3JO6jpiWJ5rO9zpp1LDTsfp'
+});
+
 var tweetsArray = [];
 
 io.sockets.on('connection', function(socket) {
