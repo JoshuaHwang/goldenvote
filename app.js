@@ -1,7 +1,7 @@
 var express = require('express');
 var app     = express();
 var path    = require('path');
-var twit    = require('twit');
+var twit    = require('./twitter');
 
 var port = process.env.PORT || 8080;
 console.log(port + ' is the magic port!');
@@ -16,19 +16,12 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 
-var t = new twit({
-  consumer_key: 'wjJzOeCTa3NgIwpng7uBbtP0o',
-  consumer_secret: 'mFY7YGOkj9LwITBBXdjj4sGsJ3auLaZyDyQr7gGoZ0EEAdzEQD',
-  access_token: '4569267073-rwUTZglZLMoKUTrTllluJq3zzGJK2uQ4lBRJkpJ',
-  access_token_secret: 'eAwPJybDLYq0G3N5qYivzX3JO6jpiWJ5rO9zpp1LDTsfp'
-});
-
 var tweetsArray = [];
 
 io.sockets.on('connection', function(socket) {
   console.log('Someone connected!');
 
-  var stream = t.stream('statuses/filter', { 
+  var stream = twit.stream('statuses/filter', { 
     track: [
       '#Bernie2016', 
       '#Hillary2016',

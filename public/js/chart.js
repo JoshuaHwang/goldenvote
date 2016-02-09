@@ -32,7 +32,7 @@ var chart = c3.generate({
 });
 
 /* ----- START TWITTER STREAM ----- */
-var socket = io.connect('http://localhost:8080');
+var socket = io.connect('process.env.PORT' || 'http://localhost:8080');
 
 socket.on('stream', function(tweet){
   console.log(tweet);
