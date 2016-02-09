@@ -6,7 +6,9 @@ var io      = require('socket.io').listen(server);
 var twit    = require('twit');
 var config  = require('./routes/config.js');
 
-server.listen(8080);
+var port = Number(process.env.PORT || 8080);
+
+port.listen(8080);
 console.log('8080 is the magic port!');
 
 app.use(express.static('public'));
